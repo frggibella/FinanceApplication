@@ -12,7 +12,7 @@ public class Entry implements Serializable{
     private Double amount;
     private String date;
 
-    //Konstruktor der Klasse
+    //Konstruktor der Klassen
     public Entry(String name, Double amount, String date){
         this.name = name;
         this.amount = amount;
