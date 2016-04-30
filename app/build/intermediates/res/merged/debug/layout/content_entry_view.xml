@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_entry_view" tools:context=".EntryViewActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40pt"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/entry_activity_enter_new_entry"
+                android:id="@+id/TextView2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/entry_activity_insert_name"
+                android:id="@+id/Name" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/entryName" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="13pt"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/entry_activity_insert_amount"
+                android:id="@+id/Betrag" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned|numberDecimal"
+                android:ems="10"
+                android:id="@+id/entryAmount" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="13pt"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/entry_activity_insert_date"
+                android:id="@+id/Datum" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:id="@+id/entryDate" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="13pt"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/gap" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/entry_activity_delete_entry"
+                android:id="@+id/deleteEntry"
+                android:layout_span="2"
+                android:onClick="deleteEntry"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/entry_activity_safe_entry"
+                android:id="@+id/button"
+                android:layout_span="2"
+                android:onClick="saveEntry"/>
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>
+<!-- From: file:/Users/beahildehrandt/AndroidStudioProjects/FinanceCalculator/app/src/main/res/layout/content_entry_view.xml -->
