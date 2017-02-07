@@ -4,7 +4,7 @@
     <string name="main_activity_new_entry">New entry</string>
     <string name="main_activity_headline">Overview</string>
     <string name="title_activity_entry_view">Entry</string>
-    <string name="entry_activity_safe_entry">Safe entry</string>
+    <string name="entry_activity_safe_entry">Save entry</string>
     <string name="entry_activity_delete_entry">Delete entry</string>
     <string name="entry_activity_delete_all">Delete all entries</string>
 

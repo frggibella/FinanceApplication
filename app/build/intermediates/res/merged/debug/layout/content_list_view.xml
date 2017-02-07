@@ -21,10 +21,6 @@
             android:gravity="end"
             android:textAlignment="gravity"
             />
-        <TextView android:id="@+id/currency"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="€"/>
 
 
 
@@ -32,7 +28,8 @@
 
     <TextView android:id="@+id/date"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        />
 
 </LinearLayout>
 <!-- From: file:/Users/beahildehrandt/AndroidStudioProjects/FinanceCalculator/app/src/main/res/layout/content_list_view.xml -->

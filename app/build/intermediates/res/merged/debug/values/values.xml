@@ -297,7 +297,7 @@
     <string name="entry_activity_insert_amount">Amount: </string>
     <string name="entry_activity_insert_date">Date: </string>
     <string name="entry_activity_insert_name">Name: </string>
-    <string name="entry_activity_safe_entry">Safe entry</string>
+    <string name="entry_activity_safe_entry">Save entry</string>
     <string name="main_activity_headline">Overview</string>
     <string name="main_activity_new_entry">New entry</string>
     <!-- From: file:/Users/beahildehrandt/AndroidStudioProjects/FinanceCalculator/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values/values.xml -->

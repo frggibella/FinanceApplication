@@ -3,7 +3,9 @@ package com.example.beahildehrandt.financecalculator;
 import java.io.Serializable;
 
 /**
- * Created by beahildehrandt on 25.10.15.
+ * Enttry-Klasse
+ *
+ * jeder Eintrag, der erstellt wird, besteht aus Namen des Eintrags, Betrag (in Euro) und einem Datum.
  */
 
 //Klassenkopf
@@ -17,14 +19,11 @@ public class Entry implements Serializable{
         this.name = name;
         this.amount = amount;
         this.date = date;
-
     }
 
+    //get- und set- Methoden
     public Double getAmount() {
         return amount;
-    }
-    public void setAmount(Double amount) {
-        this.amount = amount;
     }
     public String getName() {
         return name;
@@ -34,8 +33,5 @@ public class Entry implements Serializable{
     }
     public String getDate() {
         return date;
-    }
-    public void setDate(String date) {
-        this.date = date;
     }
 }
