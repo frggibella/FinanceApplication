@@ -6,12 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 /**
  * EntryViewActivity-Klasse
@@ -35,12 +39,12 @@ public class EntryViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         //UI-Zuordnung:
         setContentView(R.layout.activity_entry_view);
         Intent intent = getIntent();
         //Übergeben des Eintrags aus der MainViewActivity
         position = intent.getStringExtra(MainViewActivity.EXTRA_POSITION);
-
         dateButton = (Button) findViewById(R.id.entryDate);
 
         if (position != null){
@@ -53,11 +57,16 @@ public class EntryViewActivity extends AppCompatActivity {
             //Vorausfüllen der Textfelder
             EditText amountText = (EditText) findViewById(R.id.entryAmount);
             amountText.setText(intent.getStringExtra(MainViewActivity.EXTRA_AMO));
-
             EditText nameText = (EditText) findViewById(R.id.entryName);
             nameText.setText(intent.getStringExtra(MainViewActivity.EXTRA_NAM));
-
             dateButton.setText(intent.getStringExtra(MainViewActivity.EXTRA_DAT));
+        }
+        else {
+            SimpleDateFormat sdf = new SimpleDateFormat("d.M.yyyy");
+            String currentDate = sdf.format(new Date());
+            dateButton.setText(currentDate);
+            dates = currentDate;
+
         }
     }
 

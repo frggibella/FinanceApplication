@@ -1,9 +1,8 @@
 package com.example.beahildehrandt.financecalculator;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -24,18 +23,6 @@ public class MainViewActivity extends AppCompatActivity {
     private ArrayList<Double> entryListDouble = new ArrayList<Double>();
     private ArrayList<String> entryListDate = new ArrayList<String>();
     private ArrayList<Entry> entryList = new ArrayList<Entry>();
- /*   private void getTitleList(){
-        Entry tempEntry = new Entry;
-        ArrayList titleList = new ArrayList<String>;
-        for ( int i = 0, i < entryList.size(), i++){
-            String temp = entryList.getName(i);
-
-        }
-    };
-
-    entryList.getAmountList();
-    entryList.getDateList();
-    */
 
     private ListView listView;
     public MyCustomBaseAdapter myCustomBaseAdapter;
@@ -56,8 +43,10 @@ public class MainViewActivity extends AppCompatActivity {
 
         //UI-Element aus xml
         setContentView(R.layout.activity_main_view);
-        // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        // setSupportActionBar(toolbar);
+
+        //Toolbar für App-Überschrift (Label in Manifestdatei festgelegt, Layout in activity_main_view)
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         //Aufruf von persistierten Dateien
         tinydb = new TinyDB(this);
@@ -156,15 +145,17 @@ public class MainViewActivity extends AppCompatActivity {
         //Arraylist "entryList" vom selbst kreierten Datentyp "Entry" wird in der compare-Methode der Comparator-Klasse "MyListSort" sortiert.
         Collections.sort(entryList, new MyListSort());
 
-        /*
+
+        //Aktualiesieren der 3 Listen, welche der EntryView übergeben werden
+        entryListString.clear();
+        entryListDouble.clear();
+        entryListDate.clear();
         for(int i = 0; i < entryList.size(); i++){
-
-                    entryListString[i] = entryList.get(i,name)[i],
-                    entryListDouble.set(i),
-                    entryListDate.set(i)
-
+            entryListString.add(entryList.get(i).getName());
+            entryListDouble.add(entryList.get(i).getAmount());
+            entryListDate.add(entryList.get(i).getDate());
         }
-        */
+
         myCustomBaseAdapter.clear();
         myCustomBaseAdapter.addAll(entryList);
         myCustomBaseAdapter.notifyDataSetChanged();
@@ -176,7 +167,7 @@ public class MainViewActivity extends AppCompatActivity {
         for (Double amou : entryListDouble) {
             sum += amou;
         }
-        //runden der Gesamtsumme:
+        //Runden der Gesamtsumme:
         DecimalFormat df = new DecimalFormat("#.##");
         sum = Double.valueOf(df.format(sum));
 
@@ -184,32 +175,6 @@ public class MainViewActivity extends AppCompatActivity {
         textView.setText("Overall: " + sum + " €");
     }
 
-
-
-
-    /*
-        @Override
-        public boolean onCreateOptionsMenu(Menu menu) {
-            // Inflate the menu; this adds items to the action bar if it is present.
-            getMenuInflater().inflate(R.menu.menu_main_view, menu);
-            return true;
-        }
-
-        @Override
-        public boolean onOptionsItemSelected(MenuItem item) {
-            // Handle action bar item clicks here. The action bar will
-            // automatically handle clicks on the Home/Up button, so long
-            // as you specify a parent activity in AndroidManifest.xml.
-            int id = item.getItemId();
-
-            //noinspection SimplifiableIfStatement
-            if (id == R.id.action_settings) {
-                return true;
-            }
-
-            return super.onOptionsItemSelected(item);
-        }
-    */
     //Buttonlistener für newEntry Button
     public void newEntry(View view){
         Intent intent = new Intent(this, EntryViewActivity.class);

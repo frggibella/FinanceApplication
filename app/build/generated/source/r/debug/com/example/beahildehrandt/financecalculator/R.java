@@ -2123,7 +2123,6 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0c0052;
         public static final int action_mode_bar_stub=0x7f0c0051;
         public static final int action_mode_close_button=0x7f0c003a;
-        public static final int action_settings=0x7f0c0085;
         public static final int activity_chooser_view_content=0x7f0c003b;
         public static final int alertTitle=0x7f0c0045;
         public static final int always=0x7f0c0030;
@@ -2149,7 +2148,6 @@ containing a value of this type.
         public static final int default_activity_button=0x7f0c003e;
         public static final int deleteAllButton=0x7f0c0075;
         public static final int deleteEntry=0x7f0c006d;
-        public static final int delete_all=0x7f0c0086;
         public static final int disableHome=0x7f0c000d;
         public static final int edit_query=0x7f0c0057;
         public static final int end=0x7f0c001e;

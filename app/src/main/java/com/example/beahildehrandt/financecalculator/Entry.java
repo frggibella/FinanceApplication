@@ -1,7 +1,5 @@
 package com.example.beahildehrandt.financecalculator;
 
-import java.io.Serializable;
-
 /**
  * Enttry-Klasse
  *
@@ -9,7 +7,7 @@ import java.io.Serializable;
  */
 
 //Klassenkopf
-public class Entry implements Serializable{
+public class Entry{
     private String name;
     private Double amount;
     private String date;

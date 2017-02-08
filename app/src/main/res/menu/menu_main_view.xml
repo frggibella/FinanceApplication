@@ -3,13 +3,4 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainViewActivity">
 
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-        android:orderInCategory="100"
-        app:showAsAction="never" />
-
-    <item android:id="@+id/delete_all"
-        android:title="@string/entry_activity_delete_all"
-        android:orderInCategory="100"
-        app:showAsAction="never"/>
 </menu>

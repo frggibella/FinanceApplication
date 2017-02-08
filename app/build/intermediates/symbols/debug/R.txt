@@ -546,7 +546,6 @@ int id action_menu_presenter 0x7f0c0003
 int id action_mode_bar 0x7f0c0052
 int id action_mode_bar_stub 0x7f0c0051
 int id action_mode_close_button 0x7f0c003a
-int id action_settings 0x7f0c0085
 int id activity_chooser_view_content 0x7f0c003b
 int id alertTitle 0x7f0c0045
 int id always 0x7f0c0030
@@ -572,7 +571,6 @@ int id decor_content_parent 0x7f0c0053
 int id default_activity_button 0x7f0c003e
 int id deleteAllButton 0x7f0c0075
 int id deleteEntry 0x7f0c006d
-int id delete_all 0x7f0c0086
 int id disableHome 0x7f0c000d
 int id edit_query 0x7f0c0057
 int id end 0x7f0c001e
